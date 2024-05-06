@@ -75,7 +75,44 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
-| https://github.com/your-repo/sample-contracts/pull/XXX | H-01 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/69 | H-01 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/67 | H-02 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/64 | H-03 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/54 | H-04 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/50 | H-05 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/49 | H-06 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/48 | H-07 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/47 | H-08 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/46 | H-09 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/35 | H-10 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/33 | H-11 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/29 | H-12 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/28 | H-13 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/27 | H-14 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/26 | H-15 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/24 | H-16 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/13 | H-17 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/80 | M-01 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/76 | M-02 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/65 | M-03 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/63 | M-04 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/60 | M-05 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/59 | M-06 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/58 | M-07 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/51 | M-08 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/44 | M-09 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/41 | M-10 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/37 | M-11 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/23 | M-12 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/22 | M-13 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/20 | M-14 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/17 | M-15 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/16 | M-16 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/15 | M-17 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/10 | M-18 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/6 | M-19 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/3 | M-20 | This mitigation does XYZ | 
+
 
 ## Out of Scope
 
