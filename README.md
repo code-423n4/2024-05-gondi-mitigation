@@ -57,7 +57,6 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 - [M-20: Hardcoded incorrect getLidoData timestamp, resulting in incorrect base point Apr. Loans can be validated with a substantially low baseRate interest](https://github.com/code-423n4/2024-04-gondi-findings/issues/3)
 
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
 
 ## Overview of changes
 
@@ -66,10 +65,9 @@ Please provide context about the mitigations that were applied if applicable and
 ## Scope
 
 ### Branch
-[ ⭐️ SPONSORS ADD A LINK TO THE BRANCH IN YOUR REPO CONTAINING ALL PRS ]
+https://github.com/pixeldaogg/florida-contracts/pull/394
 
 ### Mitigation of High & Medium Severity Issues
-[ ⭐️ SPONSORS ADD ALL RELEVANT PRs TO THE TABLE BELOW:]
 
 Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
 
