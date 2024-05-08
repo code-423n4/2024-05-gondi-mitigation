@@ -4,8 +4,8 @@
   - Judge awards: $1,460 in USDC
 - [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4)
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-05-gondi-mitigation-review/submit)
-- Starts May 10, 2024 20:00 UTC)
-- Ends May 20, 2024 20:00 UTC
+- Starts May 14, 2024 20:00 UTC)
+- Ends May 24, 2024 20:00 UTC
 
 ## Important note 
 
