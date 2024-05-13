@@ -60,7 +60,10 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 
 ## Overview of changes
 
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern.
+All invidivual fixes are addressed in a separate PR. The branche feature/developWithOpt contains the merge of all such features + a few that were found by other auditors. Because of contract size issues when adding all fixes, the following has changed:
+ - There's no bonus on Pool reallocation (we expect the dao to run this function and incur the cost)
+ - In refinancePartial, we don't allow extra principal (this is a corner case and can still be done with addNewTranche)
+ - Some of the two step variable changes in the Pool (LoanManager) have been moved to a helper contract. 
 
 ## Scope
 
@@ -73,42 +76,42 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/69 | H-01 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/67 | H-02 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/64 | H-03 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/54 | H-04 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/50 | H-05 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/49 | H-06 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/48 | H-07 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/47 | H-08 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/46 | H-09 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/35 | H-10 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/33 | H-11 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/29 | H-12 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/28 | H-13 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/27 | H-14 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/26 | H-15 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/24 | H-16 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/13 | H-17 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/80 | M-01 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/76 | M-02 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/65 | M-03 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/63 | M-04 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/60 | M-05 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/pull/367 | M-06, M-07 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/51 | M-08 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/44 | M-09 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/pull/397 | M-10 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/37 | M-11 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/23 | M-12 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/22 | M-13 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/20 | M-14 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/17 | M-15 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/16 | M-16 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/15 | M-17 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/10 | M-18 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/6 | M-19 | This mitigation does XYZ | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/3 | M-20 | This mitigation does XYZ | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/69 | H-01 | Only tranche lender can call `mergeTranches` so it assumes the responsibility. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/67 | H-02 | Change order in multiplication/division as suggested.| | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/64 | H-03 | Added caller check to avoid anyone calling `distribute`. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/54 | H-04 | Added tokenIdCheck | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/50 | H-05 | Change to `safeTransferFrom` buyer  | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/49 | H-06 | Added loanLiquidation call | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/48 | H-07 | Clear state vars | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/47 | H-08 | Need to break 1 before. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/46 | H-09 | Missing `+` | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/35 | H-10 | Refinacing a loan locks the loan. Adding a tranche can only be accepted by the borrower now (was a bug). External actors can only front-run a limited number of times. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/33 | H-11 | Passing protocol fee| 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/29 | H-12 | Added caller check | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/28 | H-13 | Added duration check. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/27 | H-14 | Added nonReentrant. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/26 | H-15 | Strict -> `<=` | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/24 | H-16 | validateOffer changed to view so validators cannot change state.| 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/13 | H-17 | Check trancheIndex to differentiate between refiFull / addNewTranche | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/80 | M-01 | Check total tranches + min amount per tranche. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/76 | M-02 | Checking signature from the existing borrower. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/65 | M-03 | addNewTranche uses protocolFee from struct. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/63 | M-04 | changed to reallocate(currentBalance, principalAmount, true) instead of proposed solution (same result) to be compliant with the interface | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/60 | M-05 | Added collectFees method | 
+| https://github.com/pixeldaogg/florida-contracts/pull/367 | M-06, M-07 | Terms must be passed in the confirm as well. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/51 | M-08 | Only adding a comment here. Borrower should always set block.timestamp +small time delta as expiration to control when the loan can be started.| 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/44 | M-09 | Missing collected fees in accounting | 
+| https://github.com/pixeldaogg/florida-contracts/pull/397 | M-10 | Check loanContract | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/37 | M-11 | There's a min bid now. This + the min improvement invalidates DoS. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/23 | M-12 | Limit auction extensions. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/22 | M-13 | Proactively reallocate (we got rid of the bonus though) | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/20 | M-14 | Corrected calculation of fees as suggested. | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/17 | M-15 | Added check (maxDuration cannot be longer.) | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/16 | M-16 | Changed to loan end time (instead of current timestamp) | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/15 | M-17 | Added field in hash | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/10 | M-18 | Always call loanManager (even if 0 proceeds) | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/6 | M-19 | Strict to `>=` | 
+| https://github.com/pixeldaogg/florida-contracts/tree/fix/3 | M-20 | Set right value for getLidoData timestamp | 
 
 
 ## Out of Scope
