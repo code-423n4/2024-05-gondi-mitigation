@@ -65,6 +65,7 @@ All invidivual fixes are addressed in a separate PR. The branche feature/develop
  - In refinancePartial, we don't allow extra principal (this is a corner case and can still be done with addNewTranche)
  - Some of the two step variable changes in the Pool (LoanManager) have been moved to a helper contract.
 Feel free to ignore issues regarding the PoolOfferHandler since we are working on a different one given the limitations of the existing one.
+ - Please note the out-of-scope item H-10. While not in scope for awards, general commentary on its design is welcome.
 
 ## Scope
 
@@ -86,7 +87,6 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/48 | H-07 | Clear state vars | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/47 | H-08 | Need to break 1 before. | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/46 | H-09 | Missing `+` | 
-|  | H-10 | Refinacing a loan locks the loan. Adding a tranche can only be accepted by the borrower now (H-10). External actors can only front-run a limited number of times. | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/33 | H-11 | Passing protocol fee| 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/29 | H-12 | Added caller check | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/28 | H-13 | Added duration check. | 
@@ -117,4 +117,4 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 
 ## Out of Scope
 
-Please list any High and Medium issues that were judged as valid but you have chosen not to fix.
+H-10 - Refinacing a loan locks the loan. Adding a tranche can only be accepted by the borrower now (H-10). External actors can only front-run a limited number of times.
