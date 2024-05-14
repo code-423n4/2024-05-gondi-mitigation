@@ -85,7 +85,7 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/48 | H-07 | Clear state vars | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/47 | H-08 | Need to break 1 before. | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/46 | H-09 | Missing `+` | 
-| https://github.com/pixeldaogg/florida-contracts/tree/fix/35 | H-10 | Refinacing a loan locks the loan. Adding a tranche can only be accepted by the borrower now (was a bug). External actors can only front-run a limited number of times. | 
+|  | H-10 | Refinacing a loan locks the loan. Adding a tranche can only be accepted by the borrower now (H-10). External actors can only front-run a limited number of times. | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/33 | H-11 | Passing protocol fee| 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/29 | H-12 | Added caller check | 
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/28 | H-13 | Added duration check. | 
