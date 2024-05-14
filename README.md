@@ -63,7 +63,8 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 All invidivual fixes are addressed in a separate PR. The branche feature/developWithOpt contains the merge of all such features + a few that were found by other auditors. Because of contract size issues when adding all fixes, the following has changed:
  - There's no bonus on Pool reallocation (we expect the dao to run this function and incur the cost)
  - In refinancePartial, we don't allow extra principal (this is a corner case and can still be done with addNewTranche)
- - Some of the two step variable changes in the Pool (LoanManager) have been moved to a helper contract. 
+ - Some of the two step variable changes in the Pool (LoanManager) have been moved to a helper contract.
+Feel free to ignore issues regarding the PoolOfferHandler since we are working on a different one given the limitations of the existing one.
 
 ## Scope
 
