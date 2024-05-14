@@ -65,7 +65,7 @@ All invidivual fixes are addressed in a separate PR. The branche feature/develop
  - In refinancePartial, we don't allow extra principal (this is a corner case and can still be done with addNewTranche)
  - Some of the two step variable changes in the Pool (LoanManager) have been moved to a helper contract.
 Feel free to ignore issues regarding the PoolOfferHandler since we are working on a different one given the limitations of the existing one.
- - Please note the out-of-scope item H-10. While not in scope for awards, general commentary on its design is welcome.
+ - Please note the out-of-scope item H-10. While not in scope for awards, general commentary on its design is welcome. The PR for H-12 can give some insight into it.
 
 ## Scope
 
