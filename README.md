@@ -74,8 +74,6 @@ https://github.com/pixeldaogg/florida-contracts/pull/394
 
 ### Mitigation of High & Medium Severity Issues
 
-Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
-
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
 | https://github.com/pixeldaogg/florida-contracts/tree/fix/69 | H-01 | Only tranche lender can call `mergeTranches` so it assumes the responsibility. | 
